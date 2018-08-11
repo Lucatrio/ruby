@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const fs = require("fs");
 const logging = require('./logging.js');
 
-config.token = process.env.TOKEN;
-
 client.on("ready", () => {
   console.log(`${client.user.username} has logged in the database`);
   client.user.setActivity(`over my r! prefix`, { type: "WATCHING" });
@@ -42,4 +40,4 @@ client.on("message", message => {
   }
 
 });
-client.login(config.token);
+client.login(process.env.TOKEN);
