@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-config.token = process.env.TOKEN;
-
 client.on("message", async message => {
 
 client.on("guildMemberAdd", (GuildMember) => {
@@ -29,4 +27,4 @@ client.on("guildMemberRemove", (GuildMember) => {
 });
 });
 });
-client.login(config.token)
+client.login(process.env.TOKEN)
